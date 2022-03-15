@@ -1,6 +1,6 @@
 import "../styles/auth.css";
 import {NavMenu} from "../components/NavMenu";
-
+import {Link} from "react-router-dom";
 const Login = () => {
     return (
         <>
@@ -18,15 +18,15 @@ const Login = () => {
             </div>
             <div class="form-control">
                 <input type="checkbox" name="checkbox" />
-                <label for="checkbox" class="fw-bold">Remember me <a href="./forgot-password.html" class="forgot-pw">Forgot your Password?</a></label>
+                <label for="checkbox" class="fw-bold">Remember me <Link to="/forgotpassword" class="forgot-pw">Forgot your Password?</Link></label>
             </div>
             <div class="form-control">
                 <button class="btn btn-primary">Login</button>
             </div>
             <div class="account-toggle fw-bold">
-                <a href="./signup.html">
+                <Link to="/signup">
                     Create New Account <span class="material-icons fw-bold">chevron_right</span>
-                </a>
+                </Link>
             </div>
         </form>
     </section>

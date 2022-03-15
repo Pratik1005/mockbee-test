@@ -1,5 +1,10 @@
+import "../styles/auth.css";
+import {NavMenu} from "../components/NavMenu";
+import {Link} from "react-router-dom";
 const Signup = () => {
     return (
+        <>
+        <NavMenu />
         <section class="form-ctn br-md">
         <form>
             <h2 class="text-center mg-bottom-md">Signup</h2>
@@ -31,11 +36,14 @@ const Signup = () => {
                 <button class="btn btn-primary">Create New Account</button>
             </div>
             <div class="account-toggle fw-bold">
-                <a href="./login.html">
+                <Link to="/login">
                     Already have an account <span class="material-icons fw-bold">chevron_right</span>
-                </a>
+                </Link>
             </div>
         </form>
     </section>
+    </>
     );
 }
+
+export {Signup};
